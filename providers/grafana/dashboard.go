@@ -53,7 +53,7 @@ func (g *DashboardGenerator) createDashboardResources(client *gapi.Client) error
 			map[string]string{},
 			[]string{},
 			map[string]interface{}{
-				"config_json": fmt.Sprintf("file(\"data/%s\")", filename),
+				"config_json": fmt.Sprintf("${file(\"data/%s\")}", filename),
 				"folder":      dashboard.FolderID,
 			},
 		)
